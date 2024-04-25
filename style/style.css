@@ -9,7 +9,10 @@ body {
 }
 form {
   max-width: fit-content;
-  margin: 72px auto;
+  margin: 56px auto;
+}
+form h2 {
+  margin-bottom: 32px;
 }
 a {
   color: inherit;
@@ -34,6 +37,17 @@ nav a {
   &:hover {
     border-bottom: 3px solid #d2483d;
   }
+}
+fieldset {
+  padding: 8px;
+  margin-block: 8px;
+}
+fieldset legend {
+  padding-inline: 8px;
+  font-weight: 600;
+}
+fieldset div {
+  margin-block: 8px;
 }
 h2.title-underline {
   margin-bottom: 32px;
@@ -165,9 +179,18 @@ footer {
   padding-inline-end: 72px;
   background-color: black;
   img {
+    max-width: 32px;
     cursor: pointer;
   }
 }
 footer img:hover rect {
   fill: #d2483d;
+}
+.submit-btn {
+  margin-top: 8px;
+}
+.error-message {
+  display: block;
+  margin-left: 16px;
+  color: #d2483d;
 }
