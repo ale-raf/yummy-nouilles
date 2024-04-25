@@ -1,3 +1,12 @@
+<?php
+
+function setClass($title, $str)
+{
+    return isset($title) && $title === ucfirst($str) ? "class=title-underline"  : null;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,9 +21,9 @@
     <header>
         <img src="images/logo-yummy-nouilles.png" alt="logo Yummy Nouilles">
         <nav>
-            <a href="home.php" class=<?= $title === "Accueil" ? "title-underline" : null ?>>Accueil</a>
-            <a href="menu.php" class=<?= $title === "Menu" ? "title-underline" : null ?>>Menu</a>
-            <a href="contact.php" class=<?= $title === "Contact" ? "title-underline" : null ?>>Contact</a>
-            <a href="form.php" class=<?= $title === "Commander" ? "title-underline" : null ?>>Commander</a>
+            <a href="home.php" <?= setClass($title, "accueil") ?>>Accueil</a>
+            <a href="menu.php" <?= setClass($title, "menu") ?>>Menu</a>
+            <a href="contact.php" <?= setClass($title, "contact") ?>>Contact</a>
+            <a href="form.php" <?= setClass($title, "commander") ?>>Commander</a>
         </nav>
     </header>
