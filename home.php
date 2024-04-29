@@ -2,7 +2,7 @@
 
 $title = "Accueil";
 
-include_once 'header.php';
+ob_start();
 
 ?>
 
@@ -12,7 +12,7 @@ include_once 'header.php';
         <h2>Les nouilles les plus <span class="body-highlight">yummy</span> de tout Paris</h2>
         <a href="form.php" class="call-to-action">Click & collect</a>
     </div>
-    <img src="./logo-yummy-nouilles.png" alt="">
+    <img src="images/logo-yummy-nouilles.png" alt="">
 </section>
 
 <section id="adresses">
@@ -76,4 +76,8 @@ include_once 'header.php';
 
 <?php
 
-include_once 'footer.php';
+$content = ob_get_clean();
+
+require 'layout.php';
+
+?>

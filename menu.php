@@ -2,7 +2,7 @@
 
 $title = "Menu";
 
-include_once 'header.php';
+ob_start();
 
 ?>
 
@@ -25,4 +25,8 @@ include_once 'header.php';
 
 <?php
 
-include_once 'footer.php';
+$content = ob_get_clean();
+
+require 'layout.php';
+
+?>
